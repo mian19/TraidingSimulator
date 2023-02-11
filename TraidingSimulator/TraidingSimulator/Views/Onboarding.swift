@@ -84,6 +84,8 @@ extension Onboarding {
         
         if lastPage == pages.count - 1 && isRateShowed == true {
             print("go To App")
+            UserDefaultsManager.shared.saveOnboarding()
+            coordinator?.toMain()
         }
     }
 }

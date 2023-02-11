@@ -16,19 +16,23 @@ class AppCoordinator: CoordinatorProtocol {
     }
     
     func start() {
-//        let vc = MainViewController()
-//        vc.coordinator = self
-//        vc.viewModel = MainViewModel()
-                let vc = Onboarding()
-                vc.coordinator = self
-        navigationController.pushViewController(vc, animated: true)
+        switch UserDefaultsManager.shared.checkOnboarding() {
+        case true:
+          toMain()
+        case false:
+          let vc = Onboarding.init(transitionStyle: .scroll, navigationOrientation: .horizontal)
+            vc.coordinator = self
+            navigationController.pushViewController(vc, animated: true)
+        }
         
     }
     
-    func toInfoVC() {
-        //            let vc = RulesViewController()
-        //            vc.coordinator = self
-        //            navigationController.pushViewController(vc, animated: true)
+    func toMain() {
+        let vc = MainViewController()
+         vc.viewModel = MainViewModel()
+         vc.coordinator = self
+        vc.navigationItem.setHidesBackButton(true, animated: true)
+         navigationController.pushViewController(vc, animated: true)
     }
     
     func toBack() {
