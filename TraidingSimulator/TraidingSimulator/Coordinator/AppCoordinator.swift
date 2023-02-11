@@ -16,9 +16,11 @@ class AppCoordinator: CoordinatorProtocol {
     }
     
     func start() {
-        let vc = MainViewController()
-        vc.coordinator = self
-        vc.viewModel = MainViewModel()
+//        let vc = MainViewController()
+//        vc.coordinator = self
+//        vc.viewModel = MainViewModel()
+                let vc = Onboarding()
+                vc.coordinator = self
         navigationController.pushViewController(vc, animated: true)
         
     }

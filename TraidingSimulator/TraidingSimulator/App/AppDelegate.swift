@@ -18,7 +18,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         let navController = UINavigationController()
         coordinator = AppCoordinator(navigationController: navController)
         coordinator?.start()
-        window?.rootViewController = navController
+       // window?.rootViewController = navController
+        window?.rootViewController = Onboarding.init(transitionStyle: .scroll, navigationOrientation: .horizontal)
         window?.makeKeyAndVisible()
         return true
     }
