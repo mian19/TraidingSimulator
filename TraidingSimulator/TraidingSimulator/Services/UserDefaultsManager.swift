@@ -7,20 +7,26 @@
 
 import Foundation
 
+enum CheckType: String {
+case onboarding, firstEntrance
+}
+
 class UserDefaultsManager {
     
     static let shared = UserDefaultsManager()
     
     private init() {}
     
-    func saveOnboarding() {
-        UserDefaults.standard.set(true, forKey: "isOnboardingFinished")
+    func saveCheck(_ checkType: CheckType) {
+        UserDefaults.standard.set(true, forKey: checkType.rawValue)
     }
     
-    func checkOnboarding() -> Bool {
-        guard let onb = UserDefaults.standard.value(forKey: "isOnboardingFinished") as? Bool else { return false }
+    func checkResult(_ checkType: CheckType) -> Bool {
+        guard let onb = UserDefaults.standard.value(forKey: checkType.rawValue) as? Bool else { return false }
         return onb
     }
+    
+    
     
 //    func saveSettings(settings: Settings) {
 //        do {

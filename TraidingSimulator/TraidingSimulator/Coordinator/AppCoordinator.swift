@@ -16,7 +16,7 @@ class AppCoordinator: CoordinatorProtocol {
     }
     
     func start() {
-        switch UserDefaultsManager.shared.checkOnboarding() {
+        switch UserDefaultsManager.shared.checkResult(.onboarding) {
         case true:
           toMain()
         case false:

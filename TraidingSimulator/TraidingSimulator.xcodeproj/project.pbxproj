@@ -21,6 +21,10 @@
 		67B1CF56299799D200D79BAB /* UIButton+CustomButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67B1CF55299799D200D79BAB /* UIButton+CustomButton.swift */; };
 		67B1CF582997A54B00D79BAB /* UIViewController+showRateView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67B1CF572997A54B00D79BAB /* UIViewController+showRateView.swift */; };
 		67B1CF5A2997AB0F00D79BAB /* UserDefaultsManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67B1CF592997AB0F00D79BAB /* UserDefaultsManager.swift */; };
+		67B1CF5C2997D11C00D79BAB /* FirstEntranceView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67B1CF5B2997D11C00D79BAB /* FirstEntranceView.swift */; };
+		67B1CF5F2997D36300D79BAB /* Inter-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 67B1CF5E2997D36300D79BAB /* Inter-Bold.ttf */; };
+		67B1CF612997D36A00D79BAB /* Inter-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 67B1CF602997D36A00D79BAB /* Inter-Medium.ttf */; };
+		67B1CF632997D37100D79BAB /* Inter-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 67B1CF622997D37100D79BAB /* Inter-Regular.ttf */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -40,6 +44,10 @@
 		67B1CF55299799D200D79BAB /* UIButton+CustomButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIButton+CustomButton.swift"; sourceTree = "<group>"; };
 		67B1CF572997A54B00D79BAB /* UIViewController+showRateView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+showRateView.swift"; sourceTree = "<group>"; };
 		67B1CF592997AB0F00D79BAB /* UserDefaultsManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefaultsManager.swift; sourceTree = "<group>"; };
+		67B1CF5B2997D11C00D79BAB /* FirstEntranceView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstEntranceView.swift; sourceTree = "<group>"; };
+		67B1CF5E2997D36300D79BAB /* Inter-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Inter-Bold.ttf"; sourceTree = "<group>"; };
+		67B1CF602997D36A00D79BAB /* Inter-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Inter-Medium.ttf"; sourceTree = "<group>"; };
+		67B1CF622997D37100D79BAB /* Inter-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Inter-Regular.ttf"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -72,6 +80,7 @@
 		6779E9452996C51600D495F2 /* TraidingSimulator */ = {
 			isa = PBXGroup;
 			children = (
+				67B1CF5D2997D34B00D79BAB /* Fonts */,
 				6779E95A2996C54400D495F2 /* App */,
 				6779E95B2996C55000D495F2 /* Extensions */,
 				6779E9692996C5E800D495F2 /* Storyboards */,
@@ -117,6 +126,7 @@
 			children = (
 				6779E9742996C7E300D495F2 /* MainViewController.swift */,
 				67B1CF5329978DE000D79BAB /* Onboarding.swift */,
+				67B1CF5B2997D11C00D79BAB /* FirstEntranceView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -169,6 +179,16 @@
 				6779E96F2996C5FB00D495F2 /* Dynamic.swift */,
 			);
 			path = Bindings;
+			sourceTree = "<group>";
+		};
+		67B1CF5D2997D34B00D79BAB /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				67B1CF5E2997D36300D79BAB /* Inter-Bold.ttf */,
+				67B1CF622997D37100D79BAB /* Inter-Regular.ttf */,
+				67B1CF602997D36A00D79BAB /* Inter-Medium.ttf */,
+			);
+			path = Fonts;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -229,6 +249,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				67B1CF612997D36A00D79BAB /* Inter-Medium.ttf in Resources */,
+				67B1CF632997D37100D79BAB /* Inter-Regular.ttf in Resources */,
+				67B1CF5F2997D36300D79BAB /* Inter-Bold.ttf in Resources */,
 				6779E9532996C51A00D495F2 /* LaunchScreen.storyboard in Resources */,
 				6779E9502996C51A00D495F2 /* Assets.xcassets in Resources */,
 			);
@@ -252,6 +275,7 @@
 				6779E9722996C5FB00D495F2 /* MainViewModel.swift in Sources */,
 				6779E9602996C5D200D495F2 /* UIColor+hex.swift in Sources */,
 				6779E9732996C5FB00D495F2 /* Dynamic.swift in Sources */,
+				67B1CF5C2997D11C00D79BAB /* FirstEntranceView.swift in Sources */,
 				6779E9472996C51600D495F2 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
