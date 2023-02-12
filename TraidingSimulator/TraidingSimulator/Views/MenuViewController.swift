@@ -12,10 +12,11 @@ class MenuViewController: UIViewController {
     var tableView: UITableView!
     var names = ["Trading", "Trading strategies", "News", "Signals", "Training", "Rate our app", "Share our app", "Usage Policy"]
     var  menuButton = UIButton()
-    
+    var actions: [(() -> ())] = []
     override func viewDidLoad() {
         super.viewDidLoad()
         view.backgroundColor = .init(rgb: 0x1C1F2D)
+        actions.append(showRateView)
     confTableView()
     }
     
@@ -24,7 +25,7 @@ class MenuViewController: UIViewController {
         tableView.delegate = self
         tableView.dataSource = self
         tableView.register(MenuCell.self, forCellReuseIdentifier: MenuCell.reuseId)
-        tableView.frame = CGRect(x: 0, y: 60, width: 0.77 * UIScreen.main.bounds.width, height: view.bounds.height - 60)
+        tableView.frame = CGRect(x: 0, y: 30, width: 0.77 * UIScreen.main.bounds.width, height: view.bounds.height - 60)
         tableView.backgroundColor = .clear
         tableView.isScrollEnabled = false
         tableView.separatorColor = .init(rgb: 0xCAD2EC)
@@ -65,6 +66,17 @@ extension MenuViewController: UITableViewDelegate, UITableViewDataSource {
         cell.iconImageView.image = UIImage(named: "menu\(indexPath.row + 1)")!
         cell.myLabel.text = names[indexPath.row]
         return cell
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        switch indexPath.row {
+        case 5:
+            showRateView()
+        case 6:
+            shareApp()
+        default:
+            return
+        }
     }
     
     
