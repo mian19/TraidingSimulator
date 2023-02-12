@@ -31,7 +31,6 @@ class AppCoordinator: CoordinatorProtocol {
         let vc = MainViewController()
          vc.viewModel = MainViewModel()
          vc.coordinator = self
-        vc.navigationItem.setHidesBackButton(true, animated: true)
          navigationController.pushViewController(vc, animated: true)
     }
     
